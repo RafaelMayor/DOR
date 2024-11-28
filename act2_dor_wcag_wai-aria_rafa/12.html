@@ -1,0 +1,30 @@
+<!-- Ejercicio 12: Blog con múltiples secciones -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Mi Blog</title>
+</head>
+<body>
+  <!-- Se usa <header> y <nav> para estructurar mejor las secciones -->
+  <header>
+    <nav>
+      <a href="#inicio">Inicio</a> | 
+      <a href="#sobre-mi">Sobre mí</a> | 
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+  <main>
+    <section aria-labelledby="articulo-reciente">
+      <h2 id="articulo-reciente">Artículo Reciente</h2>
+      <p>Este es el contenido del artículo. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <a href="#">Leer más</a>
+    </section>
+    <section aria-labelledby="otro-articulo">
+      <h2 id="otro-articulo">Otro Artículo</h2>
+      <p>Contenido del segundo artículo. Lorem ipsum dolor sit amet.</p>
+      <a href="#">Leer más</a>
+    </section>
+  </main>
+</body>
+</html>
+<!-- <header>, <nav>, y <main> organizan el contenido semánticamente; los atributos aria-labelledby mejoran la accesibilidad. -->

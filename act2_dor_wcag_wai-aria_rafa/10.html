@@ -1,0 +1,21 @@
+<!-- Ejercicio 10: Página dinámica sin accesibilidad -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Notificaciones</title>
+  <script>
+    function mostrarMensaje() {
+      const mensaje = document.getElementById('mensaje');
+      mensaje.innerText = '¡Nueva notificación!';
+      mensaje.setAttribute('role', 'status');
+      mensaje.setAttribute('aria-live', 'polite');
+    }
+  </script>
+</head>
+<body>
+  <h1>Página de Notificaciones</h1>
+  <button onclick="mostrarMensaje()">Mostrar Notificación</button>
+  <div id="mensaje" role="status" aria-live="polite"></div>
+</body>
+</html>
+<!-- Los atributos role="status" y aria-live="polite" notifican a los usuarios de lectores de pantalla sobre actualizaciones dinámicas de contenido. -->

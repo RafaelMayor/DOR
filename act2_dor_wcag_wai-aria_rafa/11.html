@@ -1,0 +1,36 @@
+<!-- Ejercicio 11: Página web de un producto -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Zapatos Deportivos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .precio {
+      font-size: 20px;
+      color: red;
+    }
+    .boton {
+      background-color: blue;
+      color: white;
+      padding: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Zapatos Deportivos</h1>
+    <div>
+      <!-- Se añade un texto alternativo descriptivo para la imagen -->
+      <img src="zapatos.jpg" alt="Zapatos deportivos color azul">
+      <p>Los mejores zapatos para correr.</p>
+      <p class="precio">Precio: $50</p>
+    </div>
+    <!-- Se cambia el div por un botón semántico -->
+    <button class="boton" onclick="alert('Producto añadido al carrito')">Añadir al carrito</button>
+  </div>
+</body>
+</html>
+<!-- <img> tiene un atributo alt descriptivo, y el botón es semántico, facilitando la navegación y el uso con teclado o lectores de pantalla. -->

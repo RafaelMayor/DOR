@@ -1,0 +1,33 @@
+<!-- Ejercicio 15: Menú interactivo -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Menú Interactivo</title>
+  <style>
+    .submenu {
+      display: none;
+    }
+    .menu[aria-expanded="true"] .submenu {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Menú de Opciones</h1>
+  <div class="menu" role="button" aria-expanded="false" tabindex="0" onclick="toggleMenu(this)">
+    <p>Opciones</p>
+    <div class="submenu">
+      <p>Opción 1</p>
+      <p>Opción 2</p>
+      <p>Opción 3</p>
+    </div>
+  </div>
+  <script>
+    function toggleMenu(element) {
+      const expanded = element.getAttribute('aria-expanded') === 'true';
+      element.setAttribute('aria-expanded', !expanded);
+    }
+  </script>
+</body>
+</html>
+<!-- aria-expanded y role="button" aseguran que el menú sea interpretable por lectores de pantalla y accesible vía teclado. -->
