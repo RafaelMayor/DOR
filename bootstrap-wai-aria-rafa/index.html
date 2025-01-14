@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mejora de Accesibilidad con WAI-ARIA</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container my-5">
+    <h1 class="mb-4">Mejora de Accesibilidad en Bootstrap con WAI-ARIA</h1>
+
+    <!-- Botón -->
+    <section class="mb-5">
+      <h2>1. Botón</h2>
+      <h3>Original</h3>
+      <button class="btn btn-primary">Enviar</button>
+
+      <h3>Mejorado</h3>
+      <button class="btn btn-primary" aria-pressed="false">Enviar</button>
+    </section>
+
+    <!-- Navbar -->
+    <section class="mb-5">
+      <h2>2. Barra de Navegación (Navbar)</h2>
+      <h3>Original</h3>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Mi Sitio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Características</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <h3>Mejorado</h3>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light" role="navigation">
+        <a class="navbar-brand" href="#">Mi Sitio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú de navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#" role="menuitem" aria-current="page">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" role="menuitem">Características</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </section>
+
+    <!-- Menú desplegable -->
+    <section class="mb-5">
+      <h2>3. Menú desplegable</h2>
+      <h3>Original</h3>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+          Opciones
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Acción</a></li>
+        </ul>
+      </div>
+
+      <h3>Mejorado</h3>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Opciones
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenuButton">
+          <li role="menuitem"><a class="dropdown-item" href="#">Acción</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Alerta -->
+    <section class="mb-5">
+      <h2>4. Alerta</h2>
+      <h3>Original</h3>
+      <div class="alert alert-warning">¡Advertencia!</div>
+
+      <h3>Mejorado</h3>
+      <div class="alert alert-warning" role="alert">¡Advertencia!</div>
+    </section>
+
+    <!-- Pestañas -->
+    <section class="mb-5">
+      <h2>5. Pestañas</h2>
+      <h3>Original</h3>
+      <ul class="nav nav-tabs">
+        <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Perfil</a></li>
+      </ul>
+
+      <h3>Mejorado</h3>
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" href="#" role="tab" aria-selected="true" aria-controls="inicio">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" role="tab" aria-selected="false" aria-controls="perfil" tabindex="-1">Perfil</a>
+        </li>
+      </ul>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
