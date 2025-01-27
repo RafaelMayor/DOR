@@ -1,0 +1,30 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: $dark;
+  
+    .logo {
+      width: 60px;
+      height: 40px;
+      background: url('../images/sass.png') no-repeat center;
+      background-size: contain;
+    }
+  
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+  
+      li a {
+        color: $secondary;
+        text-decoration: none;
+  
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  
